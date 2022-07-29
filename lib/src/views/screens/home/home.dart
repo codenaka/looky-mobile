@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:looky_mobile/src/models/home_viewmodel.dart';
+import 'package:looky_mobile/src/helpers/navigation_helper.dart';
+import 'package:looky_mobile/src/views/screens/home/home_viewmodel.dart';
+import 'package:looky_mobile/src/views/screens/client/today_recipes.dart';
 import 'package:stacked/stacked.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,13 +12,17 @@ class HomeScreen extends StatelessWidget {
     return ViewModelBuilder.reactive(
       viewModelBuilder: () => HomeViewModel(),
       builder: (context, model, child) => Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text("Looky"),
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Center(
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => navigationHelper(context, TodayRecipesView()),
                 child: const Text("Je suis un client"),
               ),
             ),
