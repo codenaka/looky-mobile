@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         body: Stack(
           children: [
             Image.asset(
-              "images/food1.jpg",
+              "assets/food1.jpg",
               width: width(context),
               height: height(context),
               fit: BoxFit.cover,
@@ -59,8 +59,9 @@ class HomeScreen extends StatelessWidget {
                         top: 0, right: 16, left: 16, bottom: 64),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(primary: Colors.orange),
-                      onPressed: () =>
-                          navigationHelper(context, const TodayRecipesView()),
+                      onPressed: () => navigationHelper(
+                          context, const TodayRecipesView(),
+                          isReplaced: true),
                       child: const Text(
                         "Pour les particuliers",
                       ),
