@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:looky_mobile/src/helpers/view_helper.dart';
-import 'package:looky_mobile/src/views/screens/client/today_recipesviewmodel.dart';
+import 'package:looky_mobile/src/views/screens/today_recipes/today_recipesviewmodel.dart';
 import 'package:stacked/stacked.dart';
 
 class TodayRecipesView extends StatefulWidget {
